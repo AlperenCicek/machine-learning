@@ -8,7 +8,7 @@ y_true = tf.placeholder(tf.float32, [None, 10])
 w = tf.Variable(tf.zeros([784, 10]))
 b = tf.Variable(tf.zeros([10]))
 
-logits = tf.matmul(x, w) + b
+logits = tf.matmul(x, w) + b #ReLU (Rectified Linear Unit) Fonksiyonu
 y = tf.nn.softmax(logits) #logits'den dönen olasılık katsayılarının toplamını 1 e oranlıyor
 
 xent = tf.nn.softmax_cross_entropy_with_logits(logits = logits, labels = y_true)
